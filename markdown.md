@@ -25,16 +25,23 @@ HTML and PDF.
 
 Markdown is widely used in the areas of technical documentation. Popular tools
 like Google Docs support Markdown formatting. In fact, you might already be
-using some of the ideas like wrapping text in asterisks for **emphasis**.
+using some of the ideas like wrapping text in asterisks for `**emphasis**`
+(which becomes **emphasis**).
 
 ## Syntax
+
+> [!NOTE]
+> This document is intended to be read as a HTML page. But if you're reading the
+> Markdown source, please note that code blocks are used to preserve the syntax
+> inside the Markdown snippets.
 
 ### Styling
 
 - Phrases can be strongly emphasized, i.e. made bold using `**` (double
-  asterisks). Example: **This text is strongly emphasized and appears in bold**.
+  asterisks). Example: `**strong emphasis (bold)**` becomes **strong emphasis
+  (bold)**.
 - Phrases can be gently emphasized, i.e. italicized using `*` (single asterisk).
-  Example: *This is an italicized phrase*.
+  Example: `*italicized phrase*` becomes *italicized phrase*.
 
 ### Headings
 
@@ -49,25 +56,35 @@ Example: `# Title` in Markdown is the same as `<h1>Title</h1>` in HTML.
 
 Link text is enclosed in `[]`, immediately followed by the link enclosed in `()`.
 
-Example: [This is an example link](https://example.com)
+Example: `[example](https://example.com)` becomes [example](https://example.com).
 
-You can also link to sections of the same document.
+You can also link to sections of the same document using `(#anchor)`.
 
-Example: [This is a link to the following section: Code](#code)
+Example: `[next section: Code](#code)` becomes [next section: Code](#code).
 
 ### Code
 
-Code keywords may be enclosed between a pair of "`" (backtick) characters.
-Longer code blocks may be enclosed between a pair of "```" (triple backtick)
-characters on new lines.
+Code may be enclosed in a pair of ` (backtick) characters for inline code.
 
-Enclosing code blocks in a pair of triple backticks is also called code fencing.
-You may also specify the code language in the first line, after the backticks.
+Example: \`function\` becomes inline code `function`.
+
+Longer code blocks may be enclosed between a pair of ``` (triple backtick)
+characters on new lines. This is called code fencing. You can also specify
+the language after the opening backticks.
 
 Examples:
 
-- Function keyword: `function`.
 - Code block/fence of unspecified language:
+
+  ````
+  ```
+  <html>
+    <p>This is a code block in Markdown</p>
+  </html>
+  ```
+  ````
+  
+  This renders as:
 
   ```
   <html>
@@ -76,6 +93,16 @@ Examples:
   ```
 
 - Code block/fence in JavaScript:
+
+  ````
+  ```js
+  function logToConsole() {
+    console.log("This is a JavaScript code block in Markdown");
+  }
+  ```
+  ````
+
+  This renders as:
 
   ```js
   function logToConsole() {
@@ -88,30 +115,47 @@ Examples:
 Bullet points may start with any of the following symbols: `-` (hyphen), `*`
 (asterisk), `+` (plus).
 
-Example list:
+Example list with hyphens:
+
+```
+- An item
+- Another item
+```
+
+Example list with asterisks:
+
+```
+* An item
+* Another item
+```
+
+Both the above lists render as:
 
 - An item
 - Another item
 
-Same list using asterisks instead of hyphens:
-
-* An item
-* Another item
-
 ### Ordered Lists
 
-Items in an ordered list may start with the number of that item in the list, or
-with number one (1).
+Ordered lists can use sequential numbering or repeat one (1) for all items.
 
-Example:
+Example list with items numbered sequentially:
+
+```
+1. First item
+2. Second item
+```
+
+Example list with all items numbered with one (1):
+
+```
+1. First item
+1. Second item
+```
+
+Both the above lists render as:
 
 1. First item
 2. Second item
-
-Same list with all items numbered with just 1:
-
-1. First item
-1. Second item
 
 ## Additional Notes
 
@@ -133,4 +177,4 @@ Same list with all items numbered with just 1:
 Navigation:
 
 - [↑ Go to top](#markdown)
-- [↩ Return to Index ](README.md)
+- [↩ Return to Index](README.md)
