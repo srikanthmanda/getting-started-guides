@@ -127,3 +127,10 @@ Same list with all items numbered with just 1:
 - [Markdown: Basics](https://daringfireball.net/projects/markdown/basics), by
   its creator John Gruber.
 - [GitHub Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+---
+
+Navigation:
+
+- [↑ Go to top](#markdown)
+- [↩ Return to Index ](README.md)
