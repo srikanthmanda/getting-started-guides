@@ -64,7 +64,7 @@ Example: `[next section: Code](#code)` becomes [next section: Code](#code).
 
 ### Code
 
-Code may be enclosed in a pair of ` (backtick) characters for inline code.
+Inline code is enclosed in ` (backtick) characters.
 
 Example: \`function\` becomes inline code `function`.
 
